@@ -12,10 +12,11 @@ class UserController {
       phone,
     });
 
+    const messageUserAlreadyExists = "Esse whatsapp já foi cadastrado";
+
     if (userAlreadyExists) {
       return response.status(400).json({
-        error:
-          "Esse whatsapp já foi cadastrado, iremos entrar em contato em breve",
+        error: messageUserAlreadyExists,
       });
     }
 
