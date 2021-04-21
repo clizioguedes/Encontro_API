@@ -3,8 +3,6 @@ import { UserController } from "./controllers/UserController";
 
 import cors from "cors";
 
-const API_URL = process.env.API_URL;
-
 const options: cors.CorsOptions = {
   allowedHeaders: [
     "Origin",
@@ -12,10 +10,11 @@ const options: cors.CorsOptions = {
     "Content-Type",
     "Accept",
     "X-Access-Token",
+    "Access-Control-Allow-Origin",
   ],
   credentials: true,
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-  origin: API_URL,
+  origin: process.env.FRONTEND_URL,
   preflightContinue: false,
 };
 
