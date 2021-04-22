@@ -1,0 +1,14 @@
+{
+  "name": "default",
+  "type": "postgres",
+  "host": "ec2-18-206-20-102.compute-1.amazonaws.com",
+  "port": 5432,
+  "username": "esxdjnlomxvxjd",
+  "password": "2b4bcf621e1a63168548dc969ed8dda9e0dd6433981a4776f84414bf9733df4d",
+  "database": "d6m8p6251p4fh4",
+  "entities": ["dist/models/**.js"],
+  "migrations": ["dist/database/migrations/**.js"],
+  "cli": {
+    "migrationsDir": "src/database/migrations"
+  }
+}

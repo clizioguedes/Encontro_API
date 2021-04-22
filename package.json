@@ -10,7 +10,8 @@
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
     "typeorm": "ts-node ./node_modules/typeorm/cli -f ./src/ormconfig.ts",
     "test": "NODE_ENV=test jest",
-    "posttest": "rm ./src/database/database.test.sqlite"
+    "posttest": "rm ./src/database/database.test.sqlite",
+    "build": "tsc"
   },
   "dependencies": {
     "cors": "^2.8.5",
