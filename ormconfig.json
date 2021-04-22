@@ -10,5 +10,6 @@
   "cli": {
     "migrationsDir": "src/database/migrations"
   },
-  "ssl": { "rejectUnauthorized": false }
+  "ssl":true,
+  "authSource": "admin"
 }
