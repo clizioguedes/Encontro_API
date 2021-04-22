@@ -2,6 +2,9 @@
   "name": "default",
   "type": "mongodb",
   "url": "mongodb+srv://<encontro>:<encontroprontaentrega>@encontro.qfcpe.mongodb.net/encontroapp?retryWrites=true&w=majority",
+  "useNewUrlParser": true,
+  "synchronize": true,
+  "logging": true,
   "entities": ["dist/models/**.js"],
   "migrations": ["dist/database/migrations/**.js"],
   "cli": {
