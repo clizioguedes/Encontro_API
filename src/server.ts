@@ -1,3 +1,3 @@
 import { app } from "./app";
 
-app.listen(process.env.PORT || 3333, () => console.log("Rodando agora"));
+app.listen(process.env.PORT, () => console.log("Server ON"));
