@@ -12,6 +12,5 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true
-  },
-  "exclude": ["ormconfig.json", "./dist"]
+  }
 }
