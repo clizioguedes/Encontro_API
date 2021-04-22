@@ -1,7 +1,7 @@
 {
   "name": "default",
   "type": "mongodb",
-  "url": "mongodb+srv://<encontro>:<encontroprontaentrega>@encontro.qfcpe.mongodb.net/encontroapp?retryWrites=true&w=majority",
+  "url": "mongodb+srv://<admin>:<admin>@encontro.qfcpe.mongodb.net/encontroapp?retryWrites=true&w=majority",
   "useNewUrlParser": true,
   "synchronize": true,
   "logging": true,
