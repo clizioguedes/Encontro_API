@@ -1,15 +1,16 @@
 {
-  "name": "default",
   "type": "mongodb",
-  "url": "mongodb+srv://admin:admin@encontro.qfcpe.mongodb.net/encontroapp?retryWrites=true&w=majority",
+  "url": "mongodb+srv://admin:admin@encontro.qfcpe.mongodb.net/encontroapp",
+  "database": "encontroapp",
   "useNewUrlParser": true,
   "useUnifiedTopology": true,
+  "synchronize": true,
   "logging": true,
-  "entities": ["./dist/entities/**.js", "./src/entities/**.ts"],
-  "migrations": ["./dist/database/migrations/**.js", "./src/database/migrations/**.ts"],
+  "authSource": "admin",
+  "entities": ["./dist/entities/*.js"],
+  "migrations": ["./dist/database/migrations/*.js"],
   "cli": {
     "migrationsDir": ["./dist/database/migrations", "./src/database/migrations"]
   },
-  "ssl":true,
-  "authSource": "admin"
+  "ssl":true
 }

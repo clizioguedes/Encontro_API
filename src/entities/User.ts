@@ -1,10 +1,15 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
-import { v4 as uuid } from "uuid";
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ObjectID,
+  ObjectIdColumn,
+} from "typeorm";
 
-@Entity()
+@Entity("users")
 class User {
-  @PrimaryColumn()
-  readonly id: string;
+  @ObjectIdColumn()
+  readonly id: ObjectID;
 
   @Column()
   name: string;
@@ -16,8 +21,8 @@ class User {
   created_at: Date;
 
   constructor() {
-    if (!this.id) {
-      this.id = uuid();
+    if (!this.created_at) {
+      this.created_at = new Date();
     }
   }
 }
