@@ -1,9 +1,7 @@
 {
   "name": "default",
   "type": "mongodb",
-  "username": "admin",
-  "password": "admin",
-  "database": "encontroapp",
+  "url": "mongodb+srv://admin:<admin>@encontro.qfcpe.mongodb.net/encontroapp?retryWrites=true&w=majority",
   "useNewUrlParser": true,
   "useUnifiedTopology": true,
   "logging": true,
