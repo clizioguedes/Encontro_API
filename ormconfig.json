@@ -8,10 +8,10 @@
   "useUnifiedTopology": true,
   "synchronize": true,
   "logging": true,
-  "entities": ["./dist/models/**.js"],
-  "migrations": ["./dist/database/migrations/**.js"],
+  "entities": ["./dist/models/**.js", "./src/entities/**.ts"],
+  "migrations": ["./dist/database/migrations/**.js", "./src/database/migrations/**.ts"],
   "cli": {
-    "migrationsDir": "./dist/database/migrations"
+    "migrationsDir": ["./dist/database/migrations", "./src/database/migrations"]
   },
   "ssl":true,
   "authSource": "admin"
