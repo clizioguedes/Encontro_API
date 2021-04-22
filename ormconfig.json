@@ -1,9 +1,9 @@
 {
   "name": "default",
   "type": "mongodb",
-  "url": "mongodb+srv://<admin>:<admin>@encontro.qfcpe.mongodb.net/encontroapp?retryWrites=true&w=majority",
+  "url": "mongodb+srv://admin:admin@encontro.qfcpe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "useUnifiedTopology": true,
   "useNewUrlParser": true,
-  "synchronize": true,
   "logging": true,
   "entities": ["dist/models/**.js"],
   "migrations": ["dist/database/migrations/**.js"],
