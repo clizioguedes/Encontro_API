@@ -14,7 +14,7 @@ const options: cors.CorsOptions = {
   ],
   credentials: true,
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-  origin: process.env.FRONTEND_URL,
+  origin: "*",
   preflightContinue: false,
 };
 
