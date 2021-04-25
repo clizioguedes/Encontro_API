@@ -3,6 +3,17 @@ import { getCustomRepository } from "typeorm";
 import { UserRepository } from "../repositories/UserRepository";
 
 class UserController {
+  async index(request: Request, response: Response) {
+    const { id } = request.params;
+    console.log("ID USER: ", id);
+
+    const userRepository = getCustomRepository(UserRepository);
+
+    const user = await userRepository.findOne(id);
+
+    return response.json(user);
+  }
+
   async create(request: Request, response: Response) {
     const { name, phone } = request.body;
 
@@ -37,6 +48,30 @@ class UserController {
 
     console.log(all);
     return response.json(all);
+  }
+
+  async update(request: Request, response: Response) {
+    const { id } = request.params;
+
+    const { name, phone } = request.body;
+
+    const userRepository = getCustomRepository(UserRepository);
+
+    const isUpdated = await userRepository.update(id, {
+      name,
+      phone,
+      updated_at: new Date(),
+    });
+
+    console.log(isUpdated);
+
+    if (isUpdated.affected === 1) {
+      const userUpdated = await userRepository.findOne(id);
+      return response.status(201).json(userUpdated);
+    }
+    return response.status(404).json({
+      message: "User não encontrado",
+    });
   }
 }
 

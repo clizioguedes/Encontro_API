@@ -24,8 +24,12 @@ router.use(cors(options));
 
 const userController = new UserController();
 
-router.post("/users", userController.create);
+router.post("/user", userController.create);
 
 router.get("/users", userController.show);
+
+router.get("/user/:id", userController.index);
+
+router.put("/user/:id", userController.update);
 
 export { router };
