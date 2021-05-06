@@ -30,6 +30,6 @@ router.get("/users", userController.show);
 
 router.get("/user/:id", userController.index);
 
-router.put("/user/:id", userController.update);
+router.put("/user/:id", userController.updateContacted);
 
 export { router };

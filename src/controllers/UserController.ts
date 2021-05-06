@@ -50,22 +50,19 @@ class UserController {
     return response.json(all);
   }
 
-  async update(request: Request, response: Response) {
+  async updateContacted(request: Request, response: Response) {
     const { id } = request.params;
 
-    const { name, phone } = request.body;
+    const { contacted } = request.body;
 
     const userRepository = getCustomRepository(UserRepository);
 
     const isUpdated = await userRepository.update(id, {
-      name,
-      phone,
+      contacted,
       updated_at: new Date(),
     });
 
-    console.log(isUpdated);
-
-    if (isUpdated.affected === 1) {
+    if (isUpdated) {
       const userUpdated = await userRepository.findOne(id);
       return response.status(201).json(userUpdated);
     }
