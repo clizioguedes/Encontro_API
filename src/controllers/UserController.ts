@@ -5,7 +5,6 @@ import { UserRepository } from "../repositories/UserRepository";
 class UserController {
   async index(request: Request, response: Response) {
     const { id } = request.params;
-    console.log("ID USER: ", id);
 
     const userRepository = getCustomRepository(UserRepository);
 
@@ -46,7 +45,6 @@ class UserController {
 
     const all = await userRepository.find();
 
-    console.log(all);
     return response.json(all);
   }
 
