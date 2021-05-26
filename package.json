@@ -12,7 +12,7 @@
     "test": "NODE_ENV=test jest",
     "posttest": "rm ./src/database/database.test.sqlite",
     "build": "tsc",
-    "start": "node ./dist/server.js"
+    "start": "node ./public/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
