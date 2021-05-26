@@ -1,3 +1,3 @@
-import { app } from "./api/";
+// import { app } from "./api/";
 
-app.listen(process.env.PORT || 3333);
+// app.listen(process.env.PORT || 3333);
