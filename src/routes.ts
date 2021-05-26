@@ -24,12 +24,12 @@ router.use(cors(options));
 
 const userController = new UserController();
 
-router.post("/api/user", userController.create);
+router.post("/user", userController.create);
 
-router.get("/api/users", userController.show);
+router.get("/users", userController.show);
 
-router.get("/api/user/:id", userController.index);
+router.get("/user/:id", userController.index);
 
-router.put("/api/user/:id", userController.updateContacted);
+router.put("/user/:id", userController.updateContacted);
 
 export { router };
