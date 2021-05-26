@@ -4,6 +4,8 @@ import { UserRepository } from "../repositories/UserRepository";
 
 class UserController {
   async index(request: Request, response: Response) {
+    response.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+
     const { id } = request.params;
 
     const userRepository = getCustomRepository(UserRepository);
@@ -14,6 +16,8 @@ class UserController {
   }
 
   async create(request: Request, response: Response) {
+    response.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+
     const { name, phone } = request.body;
 
     const userRepository = getCustomRepository(UserRepository);
@@ -41,6 +45,8 @@ class UserController {
   }
 
   async show(request: Request, response: Response) {
+    response.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+
     const userRepository = getCustomRepository(UserRepository);
 
     const all = await userRepository.find();
@@ -49,6 +55,8 @@ class UserController {
   }
 
   async updateContacted(request: Request, response: Response) {
+    response.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+
     const { id } = request.params;
 
     const { contacted } = request.body;

@@ -1,9 +1,10 @@
-import "dotenv/config";
+import dotenv from "dotenv";
+dotenv.config();
 
 import express from "express";
 import "reflect-metadata";
-import "./database";
-import { router } from "./routes";
+import "../database";
+import { router } from "../routes";
 
 const app = express();
 app.use(express.json());
