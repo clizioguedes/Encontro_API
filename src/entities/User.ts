@@ -19,6 +19,9 @@ class User {
   @Column()
   phone: string;
 
+  @Column()
+  site: boolean;
+
   @Column({
     default: false,
   })
