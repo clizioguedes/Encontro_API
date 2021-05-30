@@ -16,8 +16,6 @@ class UserController {
   }
 
   async create(request: Request, response: Response) {
-    response.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-
     const { name, phone, site } = request.body;
 
     const userRepository = getCustomRepository(UserRepository);
